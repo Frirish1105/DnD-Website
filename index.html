@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DnD Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1f30635119.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,19 +15,74 @@
             <div class="nav__container">
                 <div class="nav__container--top">
                 <ul class="nav__links">
-                    <li><div class="logo__container"><img class="logo" src="/assets/d20 logo.png" alt=""></div></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Encounter</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Magic Item</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Monsters</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">NPC</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Items</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Spells</a></li>
-                    <li><a class="nav__link link__hover-effect link__hover-effect--white" href="">Maps</a></li>
+                    <li class="nav__link--wrapper">
+                        <div class="logo__container"><img class="logo" src="/assets/d20 logo.png" alt=""></div></li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/crossed sword.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Encounter</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/potion icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Magic Items</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/monster icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Monsters</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/npc icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">NPCs</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/chest icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Loot</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/spell icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Spells</a>
+                        </div>
+                    </li>
+                    <li class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/map icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link link__hover-effect link__hover-effect--white" href="">Maps</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
                 <div class="nav__container--bottom">
-                    <div class="nav__settings">
-                        <a class="nav__settings--link link__hover-effect link__hover-effect--white" href="">Settings</a>
+                    <div class="nav__link--wrapper">
+                        <div class="nav__link--icon-wrapper">
+                            <img class="nav__link--icon" src="/assets/settings icon.png" alt="">
+                        </div>
+                        <div class="nav__link--container">
+                            <a class="nav__link nav__link--settings link__hover-effect link__hover-effect--white" href="">Settings</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,37 +90,111 @@
         <main id="card_display">  
                 <div class="container">
                     <div class="row">
+                        <div class="card__search--container">
+                            <div class="card__search--fields">
+                                <input class="card__search--field" type="text" value="Name">
+                                <select class="card__search--field" name="Type" defaultValue="DEFAULT" id="card__search--type">
+                                    <option value="DEFAULT" default>Type</option>
+                                    <option value="ABBERATION">Abberation</option>
+                                </select>
+                                <select class="card__search--field" name="Subtype" id="card__search--subtype">
+                                    <option value="DEFAULT">Subtype</option>
+                                    <option value="MONSTEROUS">Monsterous</option>
+                                </select>
+                                <select class="card__search--field" name="Size" id="card__search--size">
+                                    <option value="DEFAULT">Size</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                                <select class="card__search--field" name="CR" id="card__search--cr">
+                                    <option value="DEFAULT">CR</option>
+                                    <option value="CR1/2">1/2</option>
+                                </select>
+                                <select class="card__search--field" name="ALIGNMENT" id="card__search--alignment">
+                                    <option value="DEFAULT">Alignment</option>
+                                    <option value="LAWFUL EVIL">Lawful Evil</option>
+                                </select>
+                                
+                            </div>
+                        </div>
                         <div class="cards">
                             <div class="card">
                                 <figure class="card__img--wrapper">
                                     <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
                                 </figure>
-                                <h2 class="card__title">Title</h2>
-                                <h3 class="card__sub-title">Subtitle</h3>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
                                 <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
                             </div>
                             <div class="card">
                                 <figure class="card__img--wrapper">
                                     <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
                                 </figure>
-                                <h2 class="card__title">Title</h2>
-                                <h3 class="card__sub-title">Subtitle</h3>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
                                 <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
                             </div>
                             <div class="card">
                                 <figure class="card__img--wrapper">
                                     <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
                                 </figure>
-                                <h2 class="card__title">Title</h2>
-                                <h3 class="card__sub-title">Subtitle</h3>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
                                 <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
                             </div>
                             <div class="card">
                                 <figure class="card__img--wrapper">
                                     <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
                                 </figure>
-                                <h2 class="card__title">Title</h2>
-                                <h3 class="card__sub-title">Subtitle</h3>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
+                                <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__img--wrapper">
+                                    <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
+                                </figure>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
+                                <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__img--wrapper">
+                                    <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
+                                </figure>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
+                                <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__img--wrapper">
+                                    <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
+                                </figure>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
+                                <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__img--wrapper">
+                                    <img class="card__img" src="/assets/aboleth card.jpg" alt="">
+                                    <span class="card__type">Abberation</span>
+                                    <span class="card__cr">CR 1/2</span>
+                                </figure>
+                                <h2 class="card__title">Aboleth</h2>
+                                <h3 class="card__sub-title">Lawful Evil | Large</h3>
                                 <div class="card__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae ut repellendus quisquam qui distinctio modi harum saepe impedit dolor.</div>
                             </div>
                         </div>
